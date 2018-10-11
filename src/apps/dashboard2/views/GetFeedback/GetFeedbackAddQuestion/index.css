@@ -1,0 +1,29 @@
+@import "components/boot/variables.css";
+
+.bf-GetFeedbackAddQuestion {
+  display: block;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  padding-top: 1.8rem;
+
+  &::before {
+    border-top: 1px solid var(--grey4);
+    content: "";
+    display: block;
+    margin-bottom: -1.8rem;
+    z-index: -1;
+  }
+
+  & > button {
+    padding: 0 2rem;
+    background: var(--grey1);
+    border: 1px solid var(--green1);
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    height: 3.6rem;
+    font-size: 1.6rem;
+    color: var(--green1);
+    z-index: 1;
+  }
+}

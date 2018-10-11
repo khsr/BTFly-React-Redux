@@ -1,0 +1,39 @@
+@import "components/boot/variables.css";
+
+.bf-MoodDriversLabels {
+  font-size: 1.2rem;
+  padding-top: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &-item {
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: 2.5rem;
+    }
+
+    & > span {
+      width: 2.4rem;
+      height: 1rem;
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    &.is-prev {
+      color: var(--grey4);
+
+      & > span {
+        background-color: var(--grey4);
+      }
+    }
+
+    &.is-curr {
+      color: var(--green1);
+
+      & > span {
+        background-color: var(--green1);
+      }
+    }
+  }
+}

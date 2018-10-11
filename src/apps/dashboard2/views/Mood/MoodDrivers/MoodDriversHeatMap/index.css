@@ -1,0 +1,80 @@
+@import "components/boot/variables.css";
+
+.bf-MoodDriversHeatMap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  &-item {
+    margin-bottom: 1.4rem;
+    background-color: var(--grey2);
+    border-radius: 5.8rem;
+    border: 1px solid var(--grey3);
+    height: 3.6rem;
+    padding: 0.1rem 0.3rem 0.1rem 0.1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &-block {
+      height: 3.4rem;
+      border-radius: 1.7rem;
+      font-size: 1.4rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+
+      &.is-icon {
+        flex: 0 0 6rem;
+        justify-content: space-between;
+        background-color: var(--white);
+
+        & > i > svg {
+          margin: 0.1rem;
+          height: 3.2rem;
+          width: 3.2rem;
+        }
+
+        & > span {
+          font-size: 1.4rem;
+          color: var(--grey16);
+          padding-right: 1.4rem;
+        }
+      }
+
+      &.is-circle {
+        flex: 1;
+        justify-content: center;
+        height: 3rem;
+        border-radius: 1.5rem;
+        color: var(--white);
+        margin-left: 1.2rem;
+        background-color: var(--grey3);
+      }
+    }
+  }
+
+  &-title {
+    padding: 1.4rem 0.3rem 1rem 0.1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-emptyItem {
+      flex: 0 0 6rem;
+    }
+
+    &-item {
+      flex: 1;
+      margin-left: 1.2rem;
+      font-size: 1.2rem;
+      color: var(--grey7);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "components/boot/variables.css";
+
+.bf-LeftMenu {
+  background-color: var(--green2);
+  flex: 0 0 22rem;
+  text-align: center;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (--before-large) {
+    display: none;
+  }
+
+  &--open {
+    display: flex;
+    width: 22rem;
+    height: 100%;
+    background-color: var(--green2);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-profile {
+    display: block;
+    text-decoration: none;
+    padding-top: 2rem;
+    background-color: var(--green4);
+    padding-bottom: 3.8rem;
+    margin-bottom: -3.8rem;
+
+    & > img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1px solid var(--green1);
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    & > span {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--green1);
+    }
+  }
+
+  &-ask {
+    min-width: 18rem;
+    max-width: 20rem;
+    height: 3.6rem;
+    flex: 0 0 3.6rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: var(--white);
+    background-color: var(--green1);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin: 1.8rem auto 0;
+    display: inline-block;
+    text-decoration: none;
+
+    & > .bf-Logo {
+      margin-right: 0.5rem;
+      margin-bottom: -0.5rem;
+    }
+  }
+
+  &-bottomLink {
+    background: var(--green1);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 1.8rem 1rem 1.5rem;
+    text-decoration: none;
+    border-top: 1px solid var(--white);
+  }
+}

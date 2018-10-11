@@ -1,0 +1,36 @@
+@import "components/boot/variables.css";
+
+.bf-MoodComments {
+  padding: 2rem;
+
+  &-empty {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--green2);
+  }
+
+  &-filter {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    & > select {
+      box-sizing: border-box;
+      height: 3.6rem;
+      min-width: 16rem;
+      border-radius: 0.3rem;
+      border: 1px solid var(--grey23);
+      appearance: none;
+      background: url("./iconSelectArrow.svg") no-repeat right var(--white);
+      background-position: 94% 55%;
+      color: var(--grey7);
+      font-size: 1.4rem;
+      padding: 0 1.4rem;
+      margin-right: 1.2rem;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+}

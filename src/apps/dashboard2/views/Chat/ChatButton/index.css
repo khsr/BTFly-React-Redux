@@ -1,0 +1,43 @@
+@import "components/boot/variables.css";
+
+.bf-ChatButton {
+  min-width: 12rem;
+  float: right;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 3.2rem;
+  padding: 0.7rem 4.4rem 0.7rem 1.4rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  margin-top: -0.2rem;
+  background: var(--green2);
+
+  &.is-empty {
+    background-image: url("./iconEmptyChat.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem bottom 0.8rem;
+  }
+
+  & > span {
+    float: right;
+    display: inline-block;
+    height: 2.4rem;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--green2);
+    margin: -0.3rem -4rem 0 0;
+  }
+
+  &.is-unread {
+    background: var(--green1);
+
+    & > span {
+      color: var(--green1);
+    }
+  }
+}

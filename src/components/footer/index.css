@@ -1,0 +1,40 @@
+.footer {
+  padding: 3rem 2rem 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+
+  &.is-white {
+    background: var(--white);
+  }
+
+  &__motto {
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+
+    &.is-grey {
+      color: var(--grey5);
+    }
+  }
+
+  &__links {
+    margin-bottom: 2rem;
+
+    & > a {
+      color: var(--green1);
+      margin-right: 1.4rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    color: var(--white-transparent50);
+
+    &.is-grey {
+      color: var(--grey5);
+    }
+  }
+}

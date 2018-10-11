@@ -1,0 +1,20 @@
+.smiley {
+  height: 3.7rem;
+  width: 3.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--happy {
+    background-image: url("./happy.svg");
+  }
+
+  &--neutral {
+    background-image: url("./neutral.svg");
+  }
+
+  &--unhappy {
+    background-image: url("./unhappy.svg");
+  }
+}

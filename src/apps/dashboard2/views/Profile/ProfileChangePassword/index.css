@@ -1,0 +1,24 @@
+@import "components/boot/variables.css";
+
+.bf-ProfilePasswordStrength {
+  display: flex;
+  align-items: center;
+  float: right;
+  color: var(--grey4);
+  font-size: 1.4rem;
+
+  &-meter {
+    width: 7rem;
+    box-sizing: border-box;
+    height: 0.6rem;
+    border: 1px solid var(--grey4);
+    border-radius: 0.3rem;
+    background-color: var(--white);
+    margin: 0 0 0 1rem;
+
+    & > span {
+      display: block;
+      height: 0.4rem;
+    }
+  }
+}

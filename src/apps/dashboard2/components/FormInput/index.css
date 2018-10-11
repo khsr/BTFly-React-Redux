@@ -1,0 +1,78 @@
+@import "components/boot/variables.css";
+
+:root {
+  --FormInput-marginBottom: 2rem;
+  --FormInput-fontSize: 1.8rem;
+}
+
+.bf-FormInput {
+  max-width: 37rem;
+  margin-bottom: var(--FormInput-marginBottom);
+  font-size: var(--FormInput-fontSize);
+  color: var(--grey5);
+
+  & > label {
+    color: var(--green2);
+    display: block;
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+
+  & > input,
+  & > select,
+  & > textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--grey3);
+    border-radius: 0.3rem;
+
+    &.is-valid {
+      border-color: var(--green1);
+    }
+
+    &.is-invalid {
+      border-color: var(--red);
+    }
+  }
+
+  & > select {
+    appearance: none;
+    background: url("./icon-select-arrow.svg") no-repeat right var(--white);
+    background-position: right 1.5rem center;
+    background-size: 1.2rem;
+    padding-right: calc(1.5rem + 1.2rem + 0.4rem);
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  & > textarea {
+    height: 25rem;
+  }
+
+  & > span {
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.4rem;
+    margin-left: -2.2rem;
+    margin-top: 1.6rem;
+    vertical-align: top;
+
+    &.is-valid {
+      content: url("./icon-valid.svg");
+    }
+
+    &.is-invalid {
+      content: url("./icon-invalid.svg");
+    }
+  }
+
+  &-description {
+    color: var(--grey7);
+    font-size: 1.6rem;
+    padding-top: 1rem;
+  }
+}

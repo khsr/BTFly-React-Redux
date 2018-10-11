@@ -1,0 +1,171 @@
+@import "components/boot/variables.css";
+
+.bf-ChartDrivers {
+  flex: 1;
+
+  &-text {
+    padding-top: 4.4rem;
+    padding-bottom: 2.6rem;
+    font-size: 1.4rem;
+    color: var(--green2);
+    text-align: center;
+
+    & > p {
+      margin: 0 0 1.7rem;
+    }
+  }
+
+  &-lines {
+    margin-bottom: -15.2rem;
+    z-index: -1;
+
+    & > div {
+      display: block;
+      box-sizing: border-box;
+      height: 1.4rem;
+      border-bottom: 1px solid var(--grey3);
+      text-align: left;
+      font-size: 1.2rem;
+      color: var(--grey4);
+    }
+  }
+}
+
+.bf-ChartDriversIcons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > span {
+      margin-top: 1rem;
+      margin-right: -3.2rem;
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--grey7);
+
+      &.is-white {
+        color: var(--white);
+      }
+
+      @media (--before-small) {
+        margin-right: 0;
+      }
+    }
+
+    &.is-red {
+      & > i {
+        background-color: var(--red);
+      }
+
+      & > span {
+        color: var(--red);
+      }
+    }
+
+    &-bubble {
+      box-sizing: border-box;
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      border: 1.8rem solid var(--green2);
+      background-color: var(--green3);
+      display: inline-flex;
+      transition: border-color 0.2s;
+
+      &.is-active {
+        border-color: var(--green4);
+      }
+
+      & > span {
+        margin: auto;
+        color: var(--white);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: center;
+
+        @media (--before-small) {
+          font-size: 2rem;
+        }
+
+        & > div {
+          font-size: 1.2rem;
+          font-weight: normal;
+        }
+      }
+
+      & > i {
+        margin: auto;
+      }
+
+      @media (--before-small) {
+        border: 1.2rem solid var(--green2);
+        height: 7rem;
+        width: 7rem;
+
+        & > i > svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &-chart {
+      height: 16.4rem;
+      width: 7.1rem;
+      margin-bottom: -1.3rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      @media (--before-small) {
+        width: 5rem;
+      }
+
+      &-line {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: -0.1rem;
+
+        & > div {
+          width: 100%;
+        }
+
+        &.is-right {
+          flex: 0 0 50%;
+        }
+
+        &.is-left {
+          margin-right: 0.1rem;
+        }
+
+        &.is-grey > div {
+          background-color: var(--grey4);
+        }
+
+        &.is-green > div {
+          background-color: var(--green1);
+        }
+
+        &.is-red > div {
+          background-color: var(--red);
+        }
+
+        &.is-white > div {
+          background-color: var(--white);
+        }
+
+        &.is-transparetnWhite > div {
+          background-color: var(--white-transparent50);
+        }
+      }
+    }
+  }
+}

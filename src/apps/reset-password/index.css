@@ -1,0 +1,29 @@
+@import "../../components/boot";
+@import "../../components/logo-large";
+@import "../../components/form";
+@import "../../components/send-button";
+@import "../../components/footer";
+
+.reset-password {
+  text-align: left;
+
+  &__subtitle {
+    color: var(--green1);
+    font-size: 3.2rem;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: var(--grey11);
+  }
+
+  &__email {
+    font-weight: normal;
+    font-size: 2rem;
+    color: var(--green1);
+  }
+}

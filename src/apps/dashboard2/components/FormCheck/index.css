@@ -1,0 +1,72 @@
+/**
+ * Inspired by
+ * http://dabblet.com/gist/e269f10328615254e29e
+ */
+@import "components/boot/variables.css";
+
+.bf-FormCheck {
+  font-size: 2.4rem;
+  font-weight: normal;
+  display: inline-block;
+
+  & > input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  & > input + label::before {
+    cursor: pointer;
+    content: "\a0";
+    display: inline-block;
+    vertical-align: 0.2rem;
+    line-height: 0.45;
+    text-indent: 0.1rem;
+    box-sizing: border-box;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid var(--grey3);
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    background: var(--white);
+  }
+
+  & > input[type="radio"] + label::before {
+    border-radius: 50%;
+    border: 1px solid var(--green2);
+  }
+
+  & > input:checked + label::before {
+    content: "\2713";
+    color: var(--green1);
+  }
+
+  & > input[type="checkbox"]:checked:disabled + label::before {
+    content: "\2713";
+    color: var(--grey4);
+    cursor: not-allowed;
+    border: none;
+  }
+
+  &.is-partial > input[type="checkbox"] + label::before {
+    content: "-";
+    color: var(--green1);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &.is-full > input[type="checkbox"] + label::before {
+    content: "+";
+    color: var(--green1);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &.is-small {
+    font-size: 1.6rem;
+
+    & > input + label::before {
+      line-height: 0.9;
+      text-indent: 0.2rem;
+    }
+  }
+}

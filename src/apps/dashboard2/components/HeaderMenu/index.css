@@ -1,0 +1,82 @@
+@import "components/boot/variables.css";
+
+.bf-HeaderMenu {
+  box-sizing: border-box;
+  background: var(--green2);
+  border: 0.2rem solid var(--green2);
+  border-radius: 0.3rem;
+  display: flex;
+
+  &-item {
+    border-radius: 0.3rem;
+    text-decoration: none;
+    min-width: 14rem;
+    padding: 0;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+
+    & > i {
+      margin: 0.2rem 0 0 1rem;
+
+      & > svg > path {
+        fill: var(--white);
+      }
+    }
+
+    &-title {
+      color: var(--white);
+      font-size: 1.6rem;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+    }
+
+    &-counter {
+      color: var(--green1);
+      margin-right: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+
+    &-notification {
+      z-index: 1;
+      display: inline-block;
+      min-width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 50%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      align-self: flex-start;
+      margin: -1.1rem -1.1rem 0 auto;
+    }
+
+    &.is-active {
+      cursor: default;
+      background-color: var(--white);
+
+      & > .bf-HeaderMenu-item-title {
+        color: var(--green2);
+      }
+
+      & > i > svg > path {
+        fill: var(--green2);
+      }
+    }
+
+    @media (--before-small) {
+      min-width: initial;
+      width: 4.4rem;
+
+      &-title,
+      &-counter {
+        display: none;
+      }
+    }
+  }
+}

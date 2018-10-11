@@ -1,0 +1,31 @@
+@import "components/boot/variables.css";
+
+.bf-ChatResolveButton {
+  z-index: 2;
+  margin-top: 1rem;
+  left: 1rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--green1);
+  padding: 0.4rem;
+  height: 3.2rem;
+  box-sizing: border-box;
+  border: 1px solid var(--green1);
+  border-radius: 0.3rem;
+  width: 10.6rem;
+  background-color: var(--grey1);
+  text-align: center;
+  cursor: pointer;
+
+  & > span { flex: 1; }
+  & > .bf-Icon > svg > path { fill: var(--green1); }
+
+  & > .bf-Spinner {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &.is-loading { cursor: default; }
+}

@@ -1,0 +1,9 @@
+@import "components/boot/variables.css";
+
+.bf-MoodShareModal {
+  & > p {
+    margin: 0 0 2.1rem;
+    font-size: 1.8rem;
+    color: var(--grey5);
+  }
+}

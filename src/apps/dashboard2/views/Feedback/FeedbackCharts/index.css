@@ -1,0 +1,179 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackCharts {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  height: 19rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--grey4);
+  background: var(--grey4);
+  display: flex;
+  flex-direction: column;
+
+  &-head {
+    flex: 0 0 2.4rem;
+    color: var(--grey7);
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &-body {
+    flex: 1;
+    background: var(--white);
+    border-radius: 0.3rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+
+    &-lines {
+      flex: 1;
+      height: 13.5rem;
+      background: var(--grey1);
+      border-radius: 0.5rem;
+      padding: 0 2rem;
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+/**
+ * Icons.
+ */
+
+.bf-FeedbackEmptyIcon,
+.bf-FeedbackVibeIcon,
+.bf-FeedbackMoodIcon {
+  border: 0.75rem solid var(--grey2);
+  border-radius: 50%;
+  flex: 0 0 13.5rem;
+  height: 13.5rem;
+  width: 13.5rem;
+  box-sizing: border-box;
+}
+
+.bf-FeedbackEmptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--grey5);
+  box-sizing: border-box;
+}
+
+.bf-FeedbackMoodIcon {
+  background: center no-repeat transparent;
+  background-size: cover;
+
+  &.is-happy { background-image: url("./iconSmileyHappy.svg"); }
+  &.is-neutral { background-image: url("./iconSmileyNeutral.svg"); }
+  &.is-unhappy { background-image: url("./iconSmileyUnhappy.svg"); }
+}
+
+.bf-FeedbackVibeIcon {
+  background: var(--green2);
+  display: flex;
+
+  & > svg {
+    height: 5.6rem;
+    width: 5.6rem;
+    margin: auto;
+
+    & > path {
+      fill: var(--white);
+    }
+  }
+}
+
+.bf-FeedbackStarIcon {
+  height: 13.5rem;
+  width: 13.5rem;
+  background: url("./iconStar.svg") center no-repeat transparent;
+  background-size: cover;
+  display: flex;
+
+  &-text {
+    margin: auto;
+
+    & > div {
+      margin-bottom: -1rem;
+      background: var(--white);
+      height: 5.3rem;
+      width: 5.3rem;
+      border-radius: 50%;
+      font-size: 2.4rem;
+      line-height: 1.8rem;
+      font-weight: bold;
+      color: var(--grey5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      & > span {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: -1rem;
+      }
+    }
+  }
+}
+
+/**
+ * Chart Line
+ */
+
+.bf-FeedbackChartLine {
+  display: flex;
+  align-items: center;
+  height: 1.6rem;
+  margin: 0.8rem 0;
+
+  &-icon {
+    flex: 0 0 1.6rem;
+    margin-right: 1rem;
+    height: 1.6rem;
+
+    & > svg {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+
+  &-iconsContainer {
+    flex: 0 0 5rem;
+    height: 1rem;
+    margin-right: 1rem;
+
+    & > i > svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+
+  &-progress {
+    flex: 1;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background: var(--white);
+
+    & > span {
+      display: block;
+      height: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &-value {
+    flex: 0 0 2.4rem;
+    margin-left: 1rem;
+    color: var(--grey6);
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

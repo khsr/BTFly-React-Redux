@@ -1,0 +1,7 @@
+@import "../../components/question";
+@import "../../components/question/form";
+@import "../../components/question/form-smiley";
+@import "../../components/question/form-thumb";
+@import "../../components/question/form-stars";
+@import "../../components/send-button";
+@import "../../components/footer";

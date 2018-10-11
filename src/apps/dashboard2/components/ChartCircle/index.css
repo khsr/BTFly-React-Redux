@@ -1,0 +1,56 @@
+@import "components/boot/variables.css";
+
+.bf-ChartCircle {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 0 14rem;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  border: 0.4rem solid var(--green4);
+  background-color: var(--green4);
+
+  &-content {
+    box-sizing: border-box;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: var(--green11);
+    border: 0.4rem solid var(--green4);
+    text-align: center;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-largeText {
+      font-size: 4.2rem;
+      font-weight: bold;
+
+      & > span {
+        font-size: 1.8rem;
+        font-weight: normal;
+        vertical-align: top;
+        margin-right: -1.6rem;
+        display: inline-block;
+      }
+    }
+
+    &-text {
+      padding: 0 2rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.bf-ChartMoodsCircle {
+  height: 14rem;
+  width: 14rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 0.4rem solid var(--green4);
+}

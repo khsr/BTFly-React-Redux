@@ -1,0 +1,34 @@
+@import "components/boot/variables.css";
+
+.bf-Spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.is-center {
+    position: absolute;
+    left: calc(50% - 0.8rem);
+    margin: 0.7rem 0 0;
+  }
+
+  & > span {
+    width: 1.6rem;
+    height: 1.6rem;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-top-color: var(--green1);
+    border-left-color: var(--green1);
+    border-radius: 70%;
+    animation: bf-Spinner 400ms linear infinite;
+  }
+}
+
+@keyframes bf-Spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

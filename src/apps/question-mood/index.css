@@ -1,0 +1,99 @@
+@import "../../components/boot";
+@import "../../components/logo-small";
+@import "../../components/question";
+@import "../../components/question/form";
+@import "../../components/question/form-stars";
+@import "../../components/send-button";
+@import "../../components/footer";
+
+.question-mood-value {
+  text-align: center;
+  margin-bottom: 1.2rem;
+
+  &__smiley {
+    & > a {
+      margin: 1.6rem 0 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+
+      & > svg {
+        height: 9rem;
+        width: 9rem;
+        border: 0.3rem solid var(--white);
+        border-radius: 50%;
+        background: var(--white);
+      }
+
+      & > span {
+        margin-right: -2.4rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        border-radius: 0 0.3rem 0.3rem 0;
+        background: url("./iconChange.svg") no-repeat center var(--green3);
+      }
+    }
+
+    & > h4 {
+      margin: 1.6rem 0 0.3rem;
+      color: var(--white);
+      font-size: 1.8rem;
+    }
+  }
+
+  &__changer {
+    box-sizing: border-box;
+    max-width: 52rem;
+    margin: 1.7rem auto;
+    border-radius: 0.3rem;
+    background: var(--white);
+    padding: 2rem 3rem;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+
+    @media (--before-small) {
+      width: calc(100% - 2rem);
+      margin: 0 1rem;
+    }
+
+    &__title {
+      color: var(--grey7);
+      font-weight: bold;
+      font-size: 1.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &__smileys {
+      display: flex;
+      justify-content: space-around;
+
+      & > button {
+        background: none; border: none; padding: 0;/* stylelint-disable-line *//* reset button style */
+        flex: 1;
+      }
+
+      & > button > svg {
+        height: 8rem;
+        width: 8rem;
+
+        @media (--before-small) {
+          height: 5rem;
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
+
+.question-mood-name {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 2.8rem;
+  margin: 0 -2.8rem -1rem;
+
+  &.is-5 { color: var(--green1); }
+  &.is-4 { color: var(--green1); }
+  &.is-3 { color: #FFAC73; }
+  &.is-2 { color: #F98371; }
+  &.is-1 { color: #F45D6F; }
+}

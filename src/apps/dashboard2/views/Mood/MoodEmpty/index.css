@@ -1,0 +1,72 @@
+@import "components/boot/variables.css";
+
+.bf-MoodEmpty {
+  &-header {
+    box-sizing: border-box;
+    height: 14rem;
+    overflow-y: hidden;
+    text-align: left;
+    background-color: var(--green1);
+    padding: 2.5rem 3rem 2rem;
+
+    & > h2 {
+      margin: 1rem 0 0;
+      font-size: 3.2rem;
+      color: var(--green3);
+      font-weight: bold;
+    }
+
+    & > i {
+      float: right;
+      margin-top: -6rem;
+
+      & > svg {
+        height: 22.6rem;
+        width: 10.4rem;
+      }
+    }
+  }
+
+  &-body {
+    padding: 5.5rem;
+    text-align: center;
+
+    &-text {
+      color: var(--grey7);
+      margin: 0 0 1.8rem;
+      font-size: 1.4rem;
+      text-align: left;
+
+      &.is-title {
+        font-size: 2.4rem;
+      }
+
+      &.is-subtitle {
+        font-size: 1.6rem;
+      }
+
+      &.is-boldGreen {
+        font-size: 1.6rem;
+        color: var(--green2);
+        font-weight: bold;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &-managerNote {
+      font-size: 1.6rem;
+      color: var(--grey7);
+      padding: 0 1rem 4rem;
+
+      & > a {
+        color: var(--green1);
+      }
+    }
+
+    &-footNote {
+      margin-top: 2rem;
+      color: var(--green1);
+      font-size: 1.2rem;
+    }
+  }
+}

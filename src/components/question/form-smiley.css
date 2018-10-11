@@ -1,0 +1,39 @@
+.question-form-smiley {
+  display: inline-block;
+  margin-left: 14%;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  & > svg {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: calc(6.4rem / 2);
+  }
+
+  & > svg path {
+    fill: #DEDEDE;
+    transition: fill 0.1s;
+  }
+
+  &.is-empty > svg path {
+    fill: #C3C3C3;
+  }
+
+  &--happy:hover > svg path,
+  &--happy.is-selected > svg path {
+    fill: #34EA7E;
+  }
+
+  &--neutral:hover > svg path,
+  &--neutral.is-selected > svg path {
+    fill: #FFA76C;
+  }
+
+  &--unhappy:hover > svg path,
+  &--unhappy.is-selected > svg path {
+    fill: #F45D6F;
+  }
+}

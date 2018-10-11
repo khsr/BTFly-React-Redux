@@ -1,0 +1,11 @@
+@import "components/boot/variables.css";
+
+.bf-Feedback {
+  display: flex;
+  width: 100%;
+
+  &-chatContent {
+    width: 100%;
+    display: flex;
+  }
+}

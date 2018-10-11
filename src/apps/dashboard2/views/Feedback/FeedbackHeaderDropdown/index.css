@@ -1,0 +1,10 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackHeaderDropdown {
+  display: inline-flex;
+
+  & > .bf-CloseButton {
+    margin-left: 1rem;
+    background-color: var(--green1);
+  }
+}

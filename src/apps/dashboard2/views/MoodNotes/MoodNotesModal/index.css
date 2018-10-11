@@ -1,0 +1,168 @@
+@import "components/boot/variables.css";
+
+.bf-MoodNotesModal {
+  border-radius: 0.3rem;
+  margin: auto;
+  height: 60rem;
+  max-height: 100%;
+  width: 63rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+
+  @media (--before-small) {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-header {
+    border-radius: 0.3rem 0.3rem 0 0;
+    background: var(--green1);
+    color: var(--white);
+    font-size: 2.4rem;
+    box-sizing: border-box;
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0 2rem;
+
+    @media (--before-small) {
+      padding: 0 1rem;
+    }
+
+    &-left,
+    &-right {
+      flex: 1;
+    }
+
+    &-right > button {
+      float: right;
+    }
+
+    &-arrowWrapper {
+      flex: 0.5;
+    }
+
+    &-arrowLeft,
+    &-arrowRight {
+      cursor: pointer;
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &-arrowLeft {
+      background: url("arrow-left.svg") no-repeat center;
+    }
+
+    &-arrowRight {
+      background: url("arrow-right.svg") no-repeat center;
+      float: right;
+    }
+
+    &-center {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-date {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-body {
+    padding: 2rem 2rem 0;
+    flex: 1;
+    flex-basis: 0; /* auto doesn't work with overflow scroll in FF */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-notes {
+    &-noNotesMessage {
+      text-align: center;
+      font-weight: normal;
+      font-size: 1.4rem;
+      margin: 0 0 0 3rem;
+      color: var(--grey4);
+    }
+  }
+
+  &-newNotesLine {
+    margin-top: -3rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      box-sizing: border-box;
+      border-top: 1px solid var(--green1);
+      height: 1px;
+      display: inline-block;
+      flex: 1;
+    }
+
+    & > span {
+      color: var(--green1);
+      font-size: 1rem;
+      margin-left: 2rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &-form {
+    border-radius: 0 0 0.3rem 0.3rem;
+    flex: 0 0 5.4rem;
+    box-sizing: border-box;
+    border-top: 1px solid var(--grey3);
+    background: var(--grey1);
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+
+    & > input {
+      box-sizing: border-box;
+      border-radius: 0.3rem;
+      border: 1px solid var(--grey3);
+      font-size: 1.8rem;
+      padding: 0.8rem;
+      height: 4rem;
+      flex: 1;
+      margin-right: 0.4rem;
+    }
+
+    & > button {
+      box-sizing: border-box;
+      background-color: var(--green1);
+      color: var(--white);
+      display: inline-block;
+      border: none;
+      height: 4rem;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      border-radius: 0.3rem;
+      padding: 0 1.8rem;
+
+      &[disabled] {
+        color: var(--grey3);
+        background-color: var(--grey2);
+      }
+    }
+  }
+}

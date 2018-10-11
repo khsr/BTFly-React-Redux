@@ -1,0 +1,14 @@
+@import "../../components/boot";
+@import "../../components/logo-large";
+@import "../../components/form";
+@import "../../components/send-button";
+@import "../../components/footer";
+
+.forgot-password {
+  color: var(--green1);
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 2.5rem 1.5rem 0;
+  text-decoration: none;
+}

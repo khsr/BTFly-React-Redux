@@ -1,0 +1,81 @@
+@import "components/boot/variables.css";
+
+.bf-ChartSidebar {
+  box-sizing: border-box;
+  height: 13.5rem;
+  width: 8rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  background: var(--green4);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  &.is-transparent {
+    background: transparent;
+  }
+
+  &-arrow {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    &.is-neutral {
+      background-color: var(--green2);
+      height: 1.8rem;
+      margin: 1.2rem 0;
+    }
+
+    &.is-up {
+      border-color: var(--green10) var(--green10) transparent transparent;
+      border-style: solid;
+      border-width: 2.1rem;
+      height: 0;
+      width: 0;
+    }
+
+    &.is-down {
+      border-color: transparent transparent var(--red) var(--red);
+      border-style: solid;
+      border-width: 2.1rem;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  &-text {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--white);
+    font-size: 1.4rem;
+
+    & > span {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+
+  &-smiley {
+    padding-bottom: 0.5rem;
+    display: inline-flex;
+    width: 100%;
+
+    & > i {
+      flex: 1;
+      display: inline-flex;
+
+      & > svg {
+        margin-left: auto;
+        margin-right: 0.3rem;
+      }
+    }
+
+    & > span {
+      flex: 1;
+      font-size: 1.2rem;
+      color: var(--white);
+      vertical-align: top;
+    }
+  }
+}

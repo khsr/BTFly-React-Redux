@@ -1,0 +1,138 @@
+@import "react-datepicker/dist/react-datepicker";
+@import "components/boot/variables.css";
+
+.bf-GetFeedbackRecap {
+  display: flex;
+  flex-direction: row;
+
+  @media (--before-small) {
+    flex-direction: column;
+  }
+
+  &-column {
+    flex: 0 0 50%;
+
+    @media (--before-small) {
+      flex: 1;
+      padding-left: 0 !important;
+      border-left: none !important;
+    }
+
+    &.is-right {
+      padding-left: 2.8rem;
+      border-left: 1px solid var(--grey3);
+    }
+
+    & > h4 {
+      color: var(--grey4);
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+
+    &-text {
+      padding-bottom: 2rem;
+
+      & > span {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--grey5);
+      }
+
+      & > small {
+        font-size: 1.4rem;
+        color: var(--grey6);
+      }
+    }
+  }
+}
+
+.bf-GetFeedbackSchedule {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 6rem;
+  border-radius: 0.3rem;
+  border: 0.2rem solid var(--green2);
+  background: var(--green2);
+  margin-top: 3.4rem;
+
+  @media (--before-small) {
+    display: none;
+  }
+
+  &-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.3rem;
+
+    /* reset button style */
+    border: none;
+    background: transparent;
+
+    &:first-of-type {
+      max-width: 15rem;
+    }
+
+    & > .bf-FormCheck {
+      margin-right: 0.5rem;
+    }
+
+    & > span {
+      color: var(--white);
+      font-weight: bold;
+      font-size: 1.4rem;
+      flex: 1;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    &.is-full {
+      flex: 1;
+    }
+
+    &.is-active {
+      background: var(--white);
+
+      & > span {
+        color: var(--green2);
+      }
+    }
+  }
+}
+
+.bf-GetFeedbackDatePicker,
+.bf-GetFeedbackTimePicker {
+  box-sizing: border-box;
+  height: 3.6rem;
+  width: 13.5rem;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  background-position: right 1.1rem center;
+  border: 1px solid var(--grey23);
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+  color: var(--grey7);
+  padding: 0 1.1rem;
+}
+
+.bf-GetFeedbackDatePicker {
+  margin-left: 1rem;
+  background-image: url("./iconDate.svg");
+}
+
+.react-datepicker__day--selected {
+  background: var(--green2);
+
+  &:hover {
+    background: var(--green3);
+  }
+}
+
+.bf-GetFeedbackTimePicker {
+  appearance: none;
+  margin-left: 1rem;
+  background-image: url("./iconTime.svg");
+}

@@ -1,0 +1,47 @@
+@import "components/boot/variables.css";
+
+.bf-PopupButton {
+  background-color: var(--green1);
+  text-transform: uppercase;
+  border: none;
+  color: var(--white);
+  font-size: 2.4rem;
+  padding: 0;
+  height: 6.4rem;
+  margin: 1.8rem 0 2.4rem;
+  border-radius: 0.3rem;
+
+  &[disabled] {
+    color: var(--grey3);
+    background: var(--grey2);
+
+    & > .bf-Icon > svg > path {
+      fill: var(--grey3);
+    }
+
+    & > .bf-Spinner {
+      background: var(--grey3);
+    }
+  }
+
+  & > span {
+    padding: 1.8rem 2.4rem 0;
+  }
+
+  & > .bf-Icon,
+  & > .bf-Spinner {
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #28CFB9;
+    height: 6.4rem;
+    width: 6.4rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+
+    & > svg {
+      width: 2.4rem;
+      height: 1.8rem;
+    }
+  }
+}

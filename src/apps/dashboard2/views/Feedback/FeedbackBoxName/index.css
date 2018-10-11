@@ -1,0 +1,39 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackBoxName {
+  margin-bottom: 2rem;
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+
+  &-counter {
+    border: none; padding: 0; /* stylelint-disable-line *//* reset default button style */
+    flex: 0 0 6.4rem;
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 0.3rem;
+    margin-right: 1.8rem;
+    background: var(--grey22) no-repeat center;
+    background-size: cover;
+    display: inline-flex;
+
+    & > span {
+      border-radius: 50%;
+      height: 3.6rem;
+      width: 3.6rem;
+      margin: auto;
+      background: var(--white);
+      color: var(--grey5);
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      text-align: center;
+    }
+  }
+
+  & > span {
+    flex: 1;
+    font-size: 2.4rem;
+    color: var(--green2);
+  }
+}

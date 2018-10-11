@@ -1,0 +1,84 @@
+@import "../../components/boot";
+@import "../../components/footer";
+
+.demo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.demo-header {
+  width: 60rem;
+  height: 10rem;
+
+  @media (--before-small) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.demo-body {
+  width: 60rem;
+  box-sizing: border-box;
+  background-color: var(--grey1);
+  padding: 1rem;
+
+  @media (--before-small) {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #606060;
+  }
+
+  &__question {
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #606060;
+  }
+
+  &__moods {
+    margin-top: 1.5rem;
+
+    &__icon {
+      height: 8.25rem;
+      width: 8rem;
+
+      @media (--before-small) {
+        height: 5.775rem;
+        width: 5.6rem;
+      }
+    }
+  }
+
+  &__anonymous {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--green1);
+    display: inline-block;
+  }
+}
+
+.demo-footer {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 3rem 0;
+
+  &__motto {
+    color: var(--green2);
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+
+  &__copy {
+    color: var(--white);
+  }
+}

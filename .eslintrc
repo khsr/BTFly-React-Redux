@@ -1,0 +1,20 @@
+{
+  "extends": ["standard", "standard-react", "plugin:import/errors"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "react/prop-types": "off",
+    "jsx-quotes": "off",
+    "import/default": "off"
+  },
+  "settings": {
+    "import/resolver": "webpack",
+    "import/ignore": [
+      "node_modules",
+      ".css$",
+      ".(jpeg|jpg|png)$"
+    ]
+  }
+}

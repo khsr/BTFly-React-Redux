@@ -1,0 +1,14 @@
+:root {
+  --logo-small-width: 4rem;
+  --logo-small-height: 3.1rem;
+}
+
+.logo-small {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: inline-block;
+  background-image: url("logo-small.svg");
+  width: var(--logo-small-width);
+  height: var(--logo-small-height);
+}

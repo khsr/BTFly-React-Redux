@@ -1,0 +1,165 @@
+.form {
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-header {
+  margin-top: 5rem;
+
+  &__title {
+    margin: 2rem auto;
+    font-size: 2.4rem;
+    color: var(--green1);
+    font-weight: bold;
+  }
+}
+
+.form-body {
+  flex: 1 0 auto;
+
+  &__bg {
+    padding: 3rem;
+    background-color: var(--grey1);
+    border-radius: 0.3rem;
+    width: 46rem;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      width: 26rem;
+    }
+  }
+
+  &__section {
+    padding-bottom: 2rem;
+
+    &:last-of-type {
+      padding-bottom: 3rem;
+    }
+
+    & > label {
+      color: var(--green2);
+      font-size: 1.8rem;
+      display: block;
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__green-span {
+    font-size: 1.6rem;
+    color: var(--green1);
+    padding-left: 0.8rem;
+  }
+
+  &__desc {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: var(--grey7);
+    margin: 0 0 3rem;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.2rem;
+    color: var(--grey8);
+    text-align: left;
+    margin: 0 0 3rem;
+    padding: 0;
+  }
+}
+
+.form-input {
+  font-size: 2.4rem;
+  width: 28rem;
+  color: var(--grey5);
+  padding: 0.8rem 1.4rem;
+  border: 1px solid var(--grey3);
+
+  @media (max-width: 600px) {
+    width: calc(100% - 3rem);
+  }
+
+  &--full-width {
+    width: calc(100% - 3rem);
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--valid {
+    border-color: var(--green1);
+  }
+
+  &--invalid {
+    border-color: var(--red);
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.2rem;
+    margin-left: -2rem;
+
+    &--valid {
+      content: url("./valid.svg");
+    }
+
+    &--invalid {
+      content: url("./invalid.svg");
+    }
+  }
+}
+
+.form-dots {
+  padding-top: 2rem;
+
+  &__item {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--white);
+
+    &--active {
+      background-color: var(--white);
+    }
+  }
+}
+
+.form-notes {
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-top: 2rem;
+
+  & > a {
+    color: var(--green1);
+  }
+}
+
+.form-password-strength {
+  display: flex;
+  align-items: center;
+  float: right;
+  color: var(--grey4);
+  font-size: 1.4rem;
+
+  &__meter {
+    width: 7rem;
+    box-sizing: border-box;
+    height: 0.6rem;
+    border: 1px solid var(--grey4);
+    border-radius: 0.3rem;
+    background-color: var(--white);
+    margin: 0 1rem;
+
+    & > span {
+      display: block;
+      height: 0.4rem;
+    }
+  }
+}

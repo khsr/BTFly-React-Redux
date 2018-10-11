@@ -1,0 +1,86 @@
+@import "components/boot/variables.css";
+
+.bf-TeamTagsSelector {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  & > input {
+    font-size: 1.8rem;
+    color: var(--grey5);
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--grey3);
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  &-list {
+    width: 100%;
+    min-width: 0;
+    overflow-y: auto;
+    max-height: 25rem;
+  }
+
+  &-tag {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    border-radius: 0.3rem;
+    padding: 0.6rem 0.8rem;
+    background-color: var(--green3);
+
+    &-name {
+      color: var(--green1);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    &-suffix {
+      color: var(--green1);
+      font-size: 1.2rem;
+      &::before { content: "\a0"; }
+    }
+
+    &.is-active {
+      background-color: var(--green2);
+
+      & > a {
+        text-transform: uppercase;
+        cursor: pointer;
+        color: var(--green1);
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid var(--green1);
+        border-radius: 0.3rem;
+        margin-left: auto;
+      }
+    }
+
+    &.is-managementable {
+      background-color: var(--green1);
+
+      & .bf-TeamTagsSelector-tag-name { color: var(--green2); }
+      & .bf-TeamTagsSelector-tag-suffix { color: var(--green2); }
+
+      & > a {
+        text-transform: uppercase;
+        cursor: pointer;
+        color: var(--white);
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid var(--white);
+        border-radius: 0.3rem;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-tag + &-tag {
+    margin-top: 1px;
+  }
+}

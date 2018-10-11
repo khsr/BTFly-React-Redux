@@ -1,0 +1,51 @@
+@import "components/boot/variables.css";
+
+.bf-FormToggler {
+  border: none; padding: 0; /* stylelint-disable-line *//* reset default button style */
+  display: block;
+  height: 3.8rem;
+  width: 6.5rem;
+  border-radius: 2rem;
+  display: inline-block;
+
+  &::before {
+    content: "\a0";
+    float: left;
+    height: 3.4rem;
+    width: 3.4rem;
+    border-radius: 1.7rem;
+    margin: 0.2rem;
+  }
+
+  &.is-off {
+    background: var(--green2);
+
+    &::before {
+      background: var(--white);
+      float: left;
+    }
+
+    &.is-grey {
+      background: var(--white);
+      &::before { background: var(--grey4); }
+    }
+  }
+
+  &.is-on {
+    background: var(--green1);
+
+    &::before {
+      background: url("./icon-check.svg") no-repeat center var(--white);
+      float: right;
+    }
+
+    &.is-grey {
+      background: var(--white);
+
+      &::before {
+        background-image: url("./icon-check-white.svg");
+        background-color: var(--green1);
+      }
+    }
+  }
+}

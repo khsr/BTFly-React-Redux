@@ -1,0 +1,104 @@
+@import "components/boot/variables.css";
+
+.bf-TeamForm {
+  margin-bottom: -1rem;
+
+  & > .bf-FormInput {
+    max-width: 100%;
+
+    & > label {
+      font-weight: bold;
+    }
+
+    & > .bf-FormRadio:not(:last-of-type) {
+      margin-right: 3rem;
+    }
+  }
+
+  &-text {
+    font-size: 1.8rem;
+    color: var(--grey7);
+    padding: 0 0 3.3rem;
+  }
+}
+
+.bf-TeamFormChannelInput {
+  &-input {
+    display: inline-flex;
+    width: 100%;
+
+    & > .bf-FormInput {
+      flex: 1;
+      border-radius: 0.3rem 0 0 0.3rem;
+
+      & > label {
+        font-weight: bold;
+      }
+    }
+
+    &-preferred {
+      box-sizing: border-box;
+      height: 4.8rem;
+      margin: 0 0 2rem -0.4rem;
+      align-self: flex-end;
+      flex: 0 0 9.6rem;
+      line-height: 4.8rem;
+      text-align: center;
+      border: 1px solid var(--grey3);
+      border-left: none;
+      border-radius: 0 0.3rem 0.3rem 0;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: var(--grey5);
+      background: var(--grey3);
+
+      &.is-active {
+        color: var(--green1);
+        background: var(--grey1);
+        line-height: normal;
+      }
+
+      &.is-error {
+        border-color: var(--red);
+      }
+
+      &.is-valid {
+        border-color: var(--green1);
+      }
+    }
+  }
+
+  &-error {
+    font-size: 1.2rem;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+    margin-top: -2rem;
+  }
+}
+
+.bf-TeamFormFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-links {
+    margin-left: 1rem;
+
+    & > a {
+      color: var(--green1);
+      font-size: 1.8rem;
+
+      &[disabled] {
+        color: var(--grey3);
+      }
+
+      &.is-red {
+        color: var(--red);
+      }
+    }
+  }
+
+  & > .bf-FormButton {
+    padding: 0 2rem;
+  }
+}

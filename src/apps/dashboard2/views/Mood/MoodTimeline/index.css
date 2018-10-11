@@ -1,0 +1,80 @@
+@import "components/boot/variables.css";
+
+.bf-MoodTimeline {
+  margin: 1rem;
+  padding: 1rem 1rem 0;
+  background: var(--green4);
+  border-radius: 0.3rem;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-body {
+    min-height: 21rem;
+    display: flex;
+    flex-direction: column;
+
+    &-empty {
+      margin: auto;
+      text-align: center;
+      color: var(--white);
+      font-size: 1.4rem;
+    }
+
+    &-chart {
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+
+      & > *:first-child {
+        margin-left: auto;
+      }
+
+      & > *:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.8rem 0;
+
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.2rem;
+      margin-right: 2rem;
+      text-transform: uppercase;
+
+      & > span {
+        display: inline-block;
+        margin-left: 0.8rem;
+        width: 2.4rem;
+      }
+
+      &.is-bar {
+        color: var(--green1);
+
+        & > span {
+          background: var(--green1);
+          height: 1rem;
+        }
+      }
+
+      &.is-line {
+        color: var(--white);
+
+        & > span {
+          background: var(--white);
+          height: 1px;
+        }
+      }
+    }
+  }
+}

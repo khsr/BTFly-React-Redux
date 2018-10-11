@@ -1,0 +1,16 @@
+.thumb {
+  height: 3rem;
+  width: 3.3rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  &--up {
+    background-image: url("./up.svg");
+  }
+
+  &--down {
+    background-image: url("./down.svg");
+  }
+}

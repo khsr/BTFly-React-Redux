@@ -1,0 +1,85 @@
+.question-form-stars {
+  height: 3.6rem;
+  border-radius: 1.8rem;
+  border: 1px solid #E2E2E2;
+  background: var(--grey1);
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  direction: rtl;
+
+  & > span {
+    display: inline-block;
+    height: 3.4rem;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    &:first-child {
+      border-radius: 0 1.8rem 1.8rem 0;
+    }
+
+    &:last-child {
+      border-radius: 1.8rem 0 0 1.8rem;
+    }
+
+    & > svg {
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+
+    &:hover ~ span,
+    &.is-selected ~ span {
+      background-color: var(--yellow2);
+
+      & > svg path {
+        fill: var(--yellow);
+      }
+    }
+
+    &:not(:last-child):hover,
+    &:not(:last-child).is-selected {
+      background: linear-gradient(to right, var(--yellow2) 50%, transparent 50%);
+    }
+
+    &:hover > svg,
+    &.is-selected > svg {
+      border-radius: 50%;
+      background-color: var(--yellow);
+      border: 1px solid var(--yellow3);
+      height: 4.2rem;
+      width: 4.2rem;
+      margin: -1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+
+      & path {
+        fill: var(--white);
+      }
+    }
+
+    @media (--small) {
+      &:first-child > svg {
+        margin-right: -3.6rem;
+      }
+
+      &:first-child:hover > svg,
+      &:first-child.is-selected > svg {
+        margin-right: -4.6rem;
+      }
+
+      &:last-child > svg {
+        margin-left: -3.6rem;
+      }
+
+      &:last-child:hover > svg,
+      &:last-child.is-selected > svg {
+        margin-left: -4.6rem;
+      }
+    }
+  }
+}

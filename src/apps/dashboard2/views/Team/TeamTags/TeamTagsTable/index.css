@@ -1,0 +1,148 @@
+@import "components/boot/variables.css";
+
+.bf-TeamTagsTable {
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-overflow-scrolling: auto; /* stop iOS scroll optimizations */
+}
+
+.bf-TeamTagsTable-header {
+  font-size: 1.2rem;
+  background-color: transparent;
+  font-weight: bold;
+
+  & > .bf-TeamTagsTable-row {
+    background-color: transparent;
+    &:hover { background-color: transparent; }
+
+    & > .bf-TeamTagsTable-cell {
+      color: var(--grey6);
+
+      & > span {
+        text-decoration: underline;
+        color: var(--grey6);
+        cursor: pointer;
+
+        &.is-active {
+          text-decoration: none;
+          color: var(--grey7);
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.bf-TeamTagsTable-row {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 1.3rem;
+  min-height: 3.2rem;
+  box-sizing: border-box;
+  color: var(--grey5);
+  background-color: var(--green2);
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+
+  & + & {
+    margin-top: 0.1rem;
+  }
+
+  &.is-large {
+    background-color: var(--green3);
+  }
+
+  &.is-foreign {
+    background-color: var(--grey5);
+
+    & .bf-TeamTagsTable-nameCell-name {
+      color: var(--grey6);
+    }
+  }
+
+  &.is-private {
+    background-color: var(--red);
+
+    & .bf-TeamTagsTable-nameCell-name {
+      color: var(--white);
+    }
+
+    & > .bf-TeamTagsTable-cell.is-removeButton {
+      & > i > svg > path {
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.bf-TeamTagsTable-cell {
+  box-sizing: border-box;
+  padding: 0.2rem 0.6rem;
+  min-width: 2rem;
+  font-size: 1.2rem;
+  color: var(--white);
+
+  @media (--before-small) { padding: 0.2rem 0.4rem; }
+
+  &.is-name {
+    flex: 1;
+  }
+
+  &.is-checkbox {
+    width: 3rem;
+
+    & > .bf-InfoCallout { width: auto; }
+
+    @media (--before-small) { width: 2rem; }
+  }
+
+  &.is-moodTracking,
+  &.is-instantFeedback {
+    width: 15rem;
+
+    @media (--before-small) { width: 6rem; }
+  }
+
+  &.is-removeButton {
+    width: 3rem;
+    & > i { cursor: pointer; }
+    & > i > svg > path { fill: var(--green1); }
+
+    @media (--before-small) { width: 2.6rem; }
+  }
+}
+
+.bf-TeamTagsTable-nameCell {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--green1);
+
+    &.is-actionable {
+      cursor: pointer;
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  &-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white);
+  }
+
+  & > .bf-InfoCallout > i > svg > path {
+    fill: var(--grey5);
+  }
+
+  &-managers {
+    font-size: 1.2rem;
+    color: var(--white);
+    min-width: 0;
+  }
+}

@@ -1,0 +1,43 @@
+@import "components/boot/variables.css";
+
+.bf-FormRadio {
+  display: inline-block;
+
+  & > input[type="radio"] {
+    display: none;
+
+    & + label {
+      color: var(--grey7);
+      font-size: 2.4rem;
+      cursor: pointer;
+    }
+
+    & + label > span {
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      margin: -3px 1rem 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid var(--grey3);
+    }
+
+    & + label > span {
+      background-color: var(--white);
+    }
+
+    &:checked + label > span {
+      background: url("./check-icon.svg") center no-repeat;
+      background-size: 80%;
+    }
+
+    &[disabled] + label {
+      color: var(--grey4) !important;
+      cursor: inherit !important;
+    }
+  }
+
+  & > input[type="radio"] + label > span {
+    border-radius: 50%;
+  }
+}

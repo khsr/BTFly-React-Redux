@@ -1,0 +1,27 @@
+@import "components/boot/variables.css";
+
+.bf-MoodDrivers {
+  padding: 2rem 3rem 3rem;
+
+  @media (--before-small) {
+    padding: 1rem 1rem 8rem;
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--grey6);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--grey4);
+
+    & > button {
+      float: right;
+      color: var(--green1);
+      font-size: 1.4rem;
+
+      /* reset button style */
+      background: none;
+      border: none;
+    }
+  }
+}

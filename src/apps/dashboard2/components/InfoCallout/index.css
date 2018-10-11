@@ -1,0 +1,228 @@
+@import "components/boot/variables.css";
+
+.bf-InfoCallout {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  cursor: pointer;
+
+  & > i > svg {
+    box-sizing: border-box;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-bottom: -0.3rem;
+
+    & > path {
+      fill: var(--green1);
+    }
+  }
+
+  &.is-white > i > svg > path {
+    fill: var(--white);
+  }
+
+  &.is-grey > i > svg > path {
+    fill: var(--grey6);
+  }
+}
+
+.bf-InfoCalloutTooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+
+  &-hidden {
+    display: none;
+  }
+
+  &-inner {
+    text-align: center;
+    padding: 1.2rem 0.6rem;
+    border-radius: 0.3rem;
+    background: var(--green4);
+    font-size: 1.4rem;
+    color: var(--white);
+    white-space: initial;
+    width: 18rem;
+  }
+
+  &-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+
+.bf-InfoCalloutTooltip {
+  &-placement-top,
+  &-placement-topLeft,
+  &-placement-topRight {
+    & .bf-InfoCalloutTooltip-content {
+      margin-bottom: 1rem;
+    }
+
+    & .bf-InfoCalloutTooltip-arrow {
+      bottom: calc(-5px + 1rem);
+      margin-left: -6px;
+      border-width: 6px 6px 0;
+      border-top-color: var(--green4);
+    }
+  }
+
+  &-placement-top &-arrow {
+    left: 50%;
+  }
+
+  &-placement-topLeft &-arrow {
+    left: 15%;
+  }
+
+  &-placement-topRight &-arrow {
+    right: 15%;
+  }
+
+  &-placement-right,
+  &-placement-rightTop,
+  &-placement-rightBottom {
+    & .bf-InfoCalloutTooltip-content {
+      margin-left: 1rem;
+    }
+
+    & .bf-InfoCalloutTooltip-arrow {
+      left: calc(-5px + 1rem);
+      margin-top: -6px;
+      border-width: 6px 6px 6px 0;
+      border-right-color: var(--green4);
+    }
+  }
+
+  &-placement-right &-arrow {
+    top: 50%;
+    margin-top: 0;
+  }
+
+  &-placement-rightTop &-arrow {
+    left: 15%;
+  }
+
+  &-placement-rightBottom &-arrow {
+    bottom: 15%;
+  }
+
+  &-placement-left,
+  &-placement-leftTop,
+  &-placement-leftBottom {
+    & .bf-InfoCalloutTooltip-content {
+      margin-right: 1rem;
+    }
+
+    & .bf-InfoCalloutTooltip-arrow {
+      right: calc(-5px + 1rem);
+      margin-top: -6px;
+      border-width: 6px 0 6px 6px;
+      border-left-color: var(--green4);
+    }
+  }
+
+  &-placement-left &-arrow {
+    top: 50%;
+  }
+
+  &-placement-leftTop &-arrow {
+    top: 15%;
+    margin-top: 0;
+  }
+
+  &-placement-leftBottom &-arrow {
+    bottom: 15%;
+  }
+
+  &-placement-bottom,
+  &-placement-bottomLeft,
+  &-placement-bottomRight {
+    & .bf-InfoCalloutTooltip-content {
+      margin-top: 1rem;
+    }
+
+    & .bf-InfoCalloutTooltip-arrow {
+      top: calc(-5px + 1rem);
+      margin-left: -6px;
+      border-width: 0 6px 6px;
+      border-bottom-color: var(--green4);
+    }
+  }
+
+  &-placement-bottom &-arrow {
+    left: 50%;
+  }
+
+  &-placement-bottomLeft &-arrow {
+    left: 15%;
+  }
+
+  &-placement-bottomRight &-arrow {
+    right: 15%;
+  }
+}
+
+.bf-InfoCalloutTooltip-zoom {
+  &-enter,
+  &-apper {
+    opacity: 0;
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+  }
+
+  &-leave {
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-play-state: paused;
+  }
+
+  &-enter&-enter-active,
+  &-appear&-appear-active {
+    animation-name: bfInfoCalloutTooltipZoomIn;
+    animation-play-state: running;
+  }
+
+  &-leave&-leave-active {
+    animation-name: bfInfoCalloutTooltipZoomOut;
+    animation-play-state: running;
+  }
+}
+
+@keyframes bfInfoCalloutTooltipZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes bfInfoCalloutTooltipZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}

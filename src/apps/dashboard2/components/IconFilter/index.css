@@ -1,0 +1,49 @@
+@import "components/boot/variables.css";
+
+.bf-IconFilter {
+  padding: 0.5rem 0.6rem 0.4rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+
+  @media (--before-small) {
+    padding: 0.5rem 0.3rem 0.4rem;
+  }
+
+  &.is-filtered {
+    background: var(--white);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+
+    &.is-dark {
+      background: var(--green2);
+    }
+  }
+
+  & > button {
+    background: none; border: none; padding: 0; /* stylelint-disable-line *//* reset style */
+    margin: 0 0.6rem;
+
+    @media (--before-small) {
+      margin: 0 0.4rem;
+    }
+  }
+
+  &-icon {
+    &:not(.is-noColors) {
+      &:not(.is-selected) > i > svg > path {
+        fill: var(--grey3);
+      }
+
+      &.is-dark:not(.is-selected) > i > svg > path {
+        fill: rgba(255, 255, 255, 0.3);
+      }
+
+      &.is-selected.is-dark > i > svg > path {
+        fill: var(--green1);
+      }
+    }
+  }
+
+  &-cancel > i > svg {
+    margin-bottom: 0.3rem;
+  }
+}

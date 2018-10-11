@@ -1,0 +1,16 @@
+@import "../../components/boot";
+@import "../../components/reply-header";
+@import "../../components/footer";
+@import "../dashboard2";
+
+.chat {
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-root {
+  display: flex;
+  height: 100%;
+}

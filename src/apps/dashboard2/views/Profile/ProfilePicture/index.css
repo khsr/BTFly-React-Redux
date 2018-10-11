@@ -1,0 +1,35 @@
+@import "components/boot/variables.css";
+
+.bf-ProfilePicture {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+
+  & > img {
+    flex: 0 0 10rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 1px solid var(--green1);
+  }
+
+  &-details {
+    margin-left: 1.5rem;
+
+    &-title {
+      color: var(--green2);
+      font-size: 1.8rem;
+    }
+
+    &-info {
+      color: var(--grey8);
+      font-size: 1.2rem;
+    }
+
+    & > button {
+      background: transparent; border: none; padding: 0; /* stylelint-disable-line *//* reset default button style */
+      color: var(--green1);
+      font-size: 1.4rem;
+    }
+  }
+}

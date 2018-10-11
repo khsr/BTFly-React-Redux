@@ -1,0 +1,6 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#DEDEDD" points="8,0 10.473,5.267 16,6.111 12,10.211 12.944,16 8,13.267
+	3.056,16 4,10.211 0,6.111 5.528,5.267 "/>
+<path fill="#FFDC00" d="M4,15.478v-5.267L3.056,16L4,15.478z M0,6.111l4,4.1V5.5L0,6.111z"/>
+</svg>

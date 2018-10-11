@@ -1,0 +1,37 @@
+@import "components/boot/variables.css";
+
+.bf-Logo {
+  display: inline-block;
+  background: url("./iconLogo.svg") no-repeat center;
+  background-size: 100%;
+  height: 3.2rem;
+  width: 4.3rem;
+
+  &.is-small {
+    height: 2rem;
+    width: 2.7rem;
+  }
+
+  &.is-large {
+    height: 4.86rem;
+    width: 6.4rem;
+  }
+}
+
+.bf-LogoWithText {
+  display: inline-block;
+  background: url("./iconLogoWithText.svg") no-repeat center;
+  background-size: 100%;
+  width: 5.7rem;
+  height: 6.5rem;
+
+  &.is-small {
+    height: 3.56rem;
+    width: 4.1rem;
+  }
+
+  &.is-large {
+    height: 8.66rem;
+    width: 9.87rem;
+  }
+}

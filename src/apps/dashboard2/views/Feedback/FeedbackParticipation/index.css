@@ -1,0 +1,39 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackParticipation {
+  margin-bottom: 2rem;
+  height: 3.6rem;
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  background: var(--grey4);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+
+  &-text {
+    color: var(--grey7);
+    font-size: 1.2rem;
+
+    & > strong {
+      font-weight: bold;
+    }
+  }
+
+  &-line {
+    flex: 1;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--white);
+    background: var(--white);
+    z-index: 1;
+    overflow: hidden;
+
+    & > span {
+      display: inline-block;
+      height: 1.6rem;
+      background: var(--green1);
+    }
+  }
+}

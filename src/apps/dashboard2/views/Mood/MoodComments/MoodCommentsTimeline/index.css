@@ -1,0 +1,80 @@
+@import "components/boot/variables.css";
+
+.bf-MoodCommentsTimeline {
+  margin: -1rem -1rem 2rem;
+  padding: 0 1rem;
+  background: var(--green4);
+  border-radius: 0.3rem;
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+
+    &.is-center {
+      justify-content: center;
+    }
+
+    &-item {
+      box-sizing: border-box;
+      flex: 0 0 11rem;
+      height: 3.2rem;
+      background: var(--green2);
+      border-radius: 0.3rem;
+      text-decoration: none;
+      margin-right: 0.1rem;
+      box-sizing: border-box;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover {
+        background: var(--green1-transparent35);
+      }
+
+      &.is-active {
+        background: var(--white);
+        color: var(--green2);
+        font-weight: bold;
+
+        & > span.is-counter {
+          background-color: var(--green2);
+          color: var(--white);
+        }
+      }
+
+      &-date {
+        flex: 1;
+        text-align: center;
+        color: var(--green1);
+        font-size: 1.2rem;
+      }
+
+      & > span {
+        flex: 0 0 2rem;
+
+        &.is-counter {
+          box-sizing: border-box;
+          height: 2rem;
+          width: 2rem;
+          line-height: 2rem;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: bold;
+          color: var(--white);
+          border-radius: 50%;
+          background: var(--white);
+          color: var(--green2);
+        }
+
+        &.is-counter.is-active {
+          border: none;
+          background: var(--red);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

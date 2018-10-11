@@ -1,0 +1,46 @@
+.reply-header {
+  flex: 0 0 5rem;
+  box-sizing: border-box;
+  background: var(--green3);
+  padding: 0.7rem;
+  text-align: center;
+
+  & > a {
+    position: absolute;
+    box-sizing: border-box;
+    height: 3.6rem;
+    width: 3.6rem;
+    border-radius: 0.3rem;
+    background: var(--green1);
+    display: flex;
+
+    & > svg {
+      margin: auto;
+      width: 2.4rem;
+      height: 1.8rem;
+
+      & > path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  & > span {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 2.4rem;
+    color: var(--white);
+  }
+
+  &.is-green {
+    background: var(--green1);
+
+    & > a {
+      background: var(--white);
+
+      & > svg > path {
+        fill: var(--green1);
+      }
+    }
+  }
+}

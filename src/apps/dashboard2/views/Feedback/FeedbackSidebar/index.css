@@ -1,0 +1,135 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackSidebar {
+  flex: 0 0 25rem;
+  background: var(--grey2);
+  border-right: 1px solid var(--grey3);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* iOS scroll optimizations */
+
+  @media (--before-small) {
+    flex: 1;
+  }
+}
+
+.bf-FeedbackSidebarItem {
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--grey3);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &.is-active {
+    background: var(--white);
+  }
+
+  &-imagePreview {
+    border: none; padding: 0; /* stylelint-disable-line *//* reset default button style */
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 0.3rem;
+    float: left;
+    margin-right: 1rem;
+    background: var(--grey22) no-repeat center;
+    background-size: cover;
+  }
+
+  &-name {
+    color: var(--green2);
+    font-size: 1.8rem;
+  }
+
+  &-date {
+    color: var(--grey4);
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+.bf-FeedbackSidebarParticipation {
+  display: inline-flex;
+  align-items: center;
+
+  &-total {
+    box-sizing: border-box;
+    height: 3.6rem;
+    min-width: 3.6rem;
+    border-radius: 1.8rem;
+    border: 0.4rem solid var(--green2);
+    color: var(--green2);
+    background: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    z-index: 1;
+    display: inline-flex;
+
+    & > span {
+      margin: auto;
+      padding: 0 0.5rem;
+    }
+
+    &.is-disabled {
+      border-color: var(--grey4);
+      color: var(--grey4);
+    }
+
+    &.is-scheduled {
+      border-color: var(--grey7);
+      color: var(--grey7);
+    }
+
+    &.is-unread {
+      border-color: var(--green1);
+      color: var(--green1);
+    }
+  }
+
+  &-container {
+    box-sizing: border-box;
+    height: 2.8rem;
+    width: 12rem;
+    background: var(--green2);
+    margin-left: -1rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    display: inline-flex;
+    align-items: center;
+
+    &.is-disabled {
+      background: var(--grey4);
+    }
+
+    &.is-scheduled {
+      background: var(--grey7);
+    }
+
+    &.is-unread {
+      background: var(--green1);
+    }
+
+    &-line {
+      box-sizing: border-box;
+      width: 7rem;
+      height: 0.6rem;
+      display: inline-block;
+      border-radius: 0.3rem;
+      border: 1px solid var(--white);
+      margin-left: 1.7rem;
+    }
+
+    & > .bf-Icon {
+      margin-left: 0.7rem;
+    }
+
+    &-icon {
+      margin-left: 0.7rem;
+      display: inline-block;
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+}

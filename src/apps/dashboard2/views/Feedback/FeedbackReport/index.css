@@ -1,0 +1,7 @@
+.bf-FeedbackReport {
+  padding: 1rem;
+
+  & > .bf-TagsDropdown {
+    padding-bottom: 1rem;
+  }
+}

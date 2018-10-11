@@ -1,0 +1,48 @@
+@import "components/boot/variables.css";
+
+.bf-TeamTagsCreateForm {
+  margin-top: 3rem;
+  display: flex;
+
+  & > input[type="text"] {
+    box-sizing: border-box;
+    height: 4.8rem;
+    width: 35rem;
+    display: inline-block;
+    padding: 1.2rem 1.5rem;
+    color: var(--grey5);
+    font-size: 1.8rem;
+    border: 1px solid var(--green1);
+    border-radius: 0.3rem;
+
+    &.is-empty { border-color: var(--grey3); }
+
+    @media (--before-small) { width: 100%; }
+  }
+
+  &-submitButton {
+    position: relative;
+    box-sizing: border-box;
+    height: 3.6rem;
+    width: 12rem;
+    padding: 0;
+    display: inline-block;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--green1);
+    font-size: 1.8rem;
+    color: var(--white);
+    text-align: center;
+    margin-left: -12.6rem;
+    margin-top: calc((4.8rem - 3.6rem) / 2);
+
+    &[disabled] {
+      background-color: var(--grey3);
+    }
+
+    & > .bf-Spinner > span {
+      border-top-color: var(--white);
+      border-left-color: var(--white);
+    }
+  }
+}

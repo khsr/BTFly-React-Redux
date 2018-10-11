@@ -1,0 +1,49 @@
+@import "components/boot/variables.css";
+
+.bf-Container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  overflow-x: hidden;
+}
+
+.bf-ContainerHeader,
+.bf-ContainerHeaderWithIcon {
+  flex: 0 0 9rem;
+  box-sizing: border-box;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--grey3);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bf-ContainerHeaderWithIcon {
+  padding: 0 3rem;
+  font-size: 2.4rem;
+  color: var(--grey5);
+
+  & > i {
+    display: inline-block;
+
+    & > svg {
+      height: 4.8rem;
+
+      & > path {
+        fill: var(--grey6);
+      }
+    }
+  }
+}
+
+.bf-ContainerBody,
+.bf-ContainerBodyWithPadding {
+  flex: 1;
+  background-color: var(--grey1);
+}
+
+.bf-ContainerBodyWithPadding {
+  padding: 2.5rem 2.8rem 0;
+}

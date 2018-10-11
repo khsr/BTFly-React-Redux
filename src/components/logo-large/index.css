@@ -1,0 +1,14 @@
+:root {
+  --logo-large-width: 8.66rem;
+  --logo-large-height: 10rem;
+}
+
+.logo-large {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: inline-block;
+  background-image: url("logo-large.svg");
+  width: var(--logo-large-width);
+  height: var(--logo-large-height);
+}

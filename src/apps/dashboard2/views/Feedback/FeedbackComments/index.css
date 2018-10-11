@@ -1,0 +1,50 @@
+@import "components/boot/variables.css";
+
+.bf-FeedbackComments {
+  padding: 2rem;
+
+  & > .bf-IconFilter {
+    margin-bottom: 2rem;
+  }
+}
+
+.bf-FeedbackCommentsEmpty {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  color: var(--green2);
+}
+
+.bf-FeedbackComment {
+  border-bottom: 1px solid var(--grey3);
+  margin: 0 2rem 2rem;
+  padding-bottom: 2rem;
+
+  @media (--before-small) {
+    margin: 0 0 2rem;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &-userName {
+    font-size: 1.6rem;
+    color: var(--grey5);
+  }
+
+  &-date {
+    font-size: 1.2rem;
+    color: var(--grey4);
+  }
+
+  &-body {
+    font-size: 1.6rem;
+    color: var(--grey7);
+  }
+
+  & > .bf-FeedbackIcon {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+}

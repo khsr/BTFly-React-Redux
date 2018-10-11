@@ -1,0 +1,80 @@
+@import "components/boot/variables.css";
+
+.bf-MoodSettings {
+  text-align: center;
+
+  &-title {
+    font-size: 2.4rem;
+    color: var(--grey7);
+    margin-bottom: 2.8rem;
+  }
+
+  & > .bf-FormInput,
+  &-timeGroup {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &-timeGroup {
+    display: flex;
+    margin-bottom: 0 auto 2rem;
+    max-width: 37rem;
+
+    & > .bf-FormInput {
+      width: 100%;
+      margin-bottom: 0;
+      max-width: none;
+    }
+
+    & > .bf-FormInput + .bf-FormInput {
+      margin-left: 1rem;
+    }
+  }
+
+  &-nextRequest {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--grey7);
+
+    & > strong {
+      color: var(--green2);
+      font-weight: bold;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-share {
+      box-sizing: border-box;
+      flex: 1;
+      height: 6rem;
+      margin-right: 1rem;
+      border-radius: 0.3rem;
+      background: var(--grey1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+
+      & > span {
+        color: var(--green2);
+        font-size: 1.6rem;
+        margin-left: auto;
+      }
+
+      & > .bf-InfoCallout {
+        margin-right: -1rem;
+        margin-left: 0.7rem;
+      }
+
+      @media (--before-small) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

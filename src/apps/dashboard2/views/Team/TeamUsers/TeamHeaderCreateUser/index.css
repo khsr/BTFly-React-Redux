@@ -1,0 +1,23 @@
+@import "components/boot/variables.css";
+
+.bf-TeamHeaderCreateUser {
+  flex: 0 0 4.8rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  box-sizing: border-box;
+  margin-left: 1rem;
+  display: flex;
+  border: 1px solid var(--green1);
+  border-radius: 0.3rem;
+  background-color: transparent;
+  align-items: center;
+  align-content: center;
+
+  & > i {
+    margin: auto;
+  }
+
+  @media (--before-medium) {
+    display: none;
+  }
+}

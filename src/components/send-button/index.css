@@ -1,0 +1,59 @@
+.send-button {
+  font-size: 2.4rem;
+  font-weight: normal;
+  border-radius: 0.3rem;
+  padding: 0.8rem 3rem 0.9rem 2.8rem;
+  color: var(--white);
+  background: var(--green1);
+  border: 1px solid var(--green1);
+  text-decoration: none;
+
+  &[disabled] {
+    color: var(--grey3);
+    background: var(--grey2);
+    border: 1px solid var(--grey3);
+
+    &:not([no-spinner])::after {
+      content: url("./arrow-grey.svg");
+    }
+  }
+
+  &:not([no-spinner])::after {
+    margin-left: 1.8rem;
+    height: 1.4rem;
+    width: 2.4rem;
+    content: url("./arrow-white.svg");
+  }
+}
+
+.send-button-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-top-color: var(--green1);
+    border-left-color: var(--green1);
+    border-radius: 70%;
+    animation: send-button 400ms linear infinite;
+
+    &--is-dark-green {
+      border-top-color: var(--green2);
+      border-left-color: var(--green2);
+    }
+  }
+}
+
+@keyframes send-button {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,21 @@
+@import "components/boot/variables.css";
+
+.bf-TeamUsersImport {
+  margin: 3rem 0;
+  color: var(--grey5);
+  font-size: 1.8rem;
+  text-align: center;
+
+  & > a {
+    color: var(--green1);
+    text-decoration: none;
+  }
+
+  & > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 44.6rem;
+    height: 27.9rem;
+  }
+}

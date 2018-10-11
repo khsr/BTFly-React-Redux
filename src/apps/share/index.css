@@ -1,0 +1,215 @@
+@import "../../components/boot";
+@import "../../components/reply-header";
+@import "../../components/footer";
+
+:root {
+  --share-margin: 1.3rem;
+}
+
+/**
+ * Server render.
+ */
+
+.bf-Share {
+  background: var(--green1);
+  flex: 1;
+}
+
+.bf-ShareConfidentialFooter {
+  background: var(--green2);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1.2rem 1rem 1.4rem;
+  text-align: center;
+}
+
+/**
+ * Client render.
+ */
+
+.bf-ShareLayout {
+  box-sizing: border-box;
+  max-width: 86rem; /* content is 80rem */
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.bf-ShareConfidentialCorner {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &-ribbon {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(45deg);
+    position: relative;
+    padding: 0.7rem 0;
+    left: -2rem;
+    top: 2.5rem;
+    width: 16rem;
+    background-color: var(--red);
+    color: var(--white);
+  }
+}
+
+.bf-ShareGreeting {
+  padding: 2.7rem var(--share-margin);
+  font-size: 2.4rem;
+  color: var(--white);
+}
+
+.bf-ShareMoods {
+  display: flex;
+  flex-direction: row;
+  margin: 0 var(--share-margin);
+  padding: 0 0 1rem;
+  overflow-x: scroll;
+}
+
+.bf-ShareDrivers {
+  margin: 0 var(--share-margin) 3.3rem;
+}
+
+.bf-ShareBlock {
+  width: 100%;
+  border: 0.2rem solid var(--green4);
+  border-radius: 0.3rem;
+  background: var(--green4);
+  display: inline-flex;
+  flex-direction: column;
+
+  &.is-medium {
+    flex: 1 1 53rem;
+    min-width: 53rem;
+  }
+
+  &.is-smallWithPadding {
+    flex: 1 1 26rem;
+    min-width: 26rem;
+    margin-left: 1rem;
+  }
+
+  &-header {
+    padding: 1rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      display: inline-block;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-left: 2rem;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 2.4rem;
+        background: var(--white);
+        margin-left: 0.8rem;
+      }
+
+      &.is-transparent {
+        color: var(--white-transparent50);
+        &::after { background: var(--white-transparent50); }
+      }
+    }
+  }
+
+  &-content {
+    min-height: 22rem;
+    display: flex;
+    flex-direction: row;
+
+    & > :not(:last-child) {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+.bf-ShareChartBlock {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 0.3rem;
+  background: var(--green2);
+
+  &.is-white {
+    background: var(--white);
+  }
+
+  &-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-text {
+    color: var(--white);
+    font-size: 1.4rem;
+    padding-top: 2rem;
+
+    &.is-white {
+      color: var(--green2);
+    }
+
+    & > b {
+      font-weight: bold;
+    }
+  }
+
+  &-largeIcon {
+    margin-top: 0.3rem;
+
+    & > svg {
+      height: 13.4rem;
+      width: 13.4rem;
+    }
+  }
+}
+
+.bf-ShareChartDrivers {
+  width: 100%;
+
+  @media (--before-small) {
+    margin: -1rem -1.5rem;
+  }
+
+  /* patch styles to different theme */
+  & .bf-ChartDrivers-lines > div {
+    border-color: var(--green4);
+  }
+
+  & .bf-ChartDriversIcons-item-bubble {
+    border-color: var(--green4);
+  }
+}
+
+.bf-ShareFooter {
+  color: var(--green4);
+  font-size: 1.4rem;
+  margin: 0 var(--share-margin) 4.5rem;
+  text-align: center;
+
+  & > a {
+    color: var(--white);
+  }
+}

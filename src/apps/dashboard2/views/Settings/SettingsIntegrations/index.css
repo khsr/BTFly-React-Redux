@@ -1,0 +1,36 @@
+@import "components/boot/variables.css";
+
+.bf-SettingsIntegrations {
+  &-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--grey5);
+    margin-bottom: 0.9rem;
+  }
+
+  &-text {
+    max-width: 38rem;
+    font-size: 1.6rem;
+    color: var(--grey7);
+    margin-bottom: 2.7rem;
+  }
+
+  &-what {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--green1);
+    font-size: 1.4rem;
+  }
+
+  &-success {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--green10);
+    display: flex;
+    align-items: center;
+
+    & > .bf-Icon {
+      margin-right: 0.8rem;
+    }
+  }
+}

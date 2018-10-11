@@ -1,0 +1,27 @@
+@import "components/boot/variables.css";
+
+.bf-CloseButton {
+  box-sizing: border-box;
+  height: 3.2rem;
+  width: 3.2rem;
+  border: 1px solid var(--white);
+  border-radius: 0.3rem;
+  padding: 0;
+  background: url("./iconCloseWhite.svg") no-repeat center transparent;
+
+  &.is-green {
+    border-color: var(--green1);
+    background-image: url("./iconCloseGreen.svg");
+    background-color: var(--white);
+  }
+
+  &.is-large {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  &.is-withoutBox {
+    border: none;
+    background-color: initial;
+  }
+}

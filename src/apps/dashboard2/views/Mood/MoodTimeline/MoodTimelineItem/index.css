@@ -1,0 +1,132 @@
+@import "components/boot/variables.css";
+
+.bf-MoodTimelineItem {
+  flex: 0 0 11rem;
+  margin-right: 0.1rem;
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  &.is-zoom-2x { flex: 0 0 calc(1.25 * 11rem); }
+  &.is-zoom-3x { flex: 0 0 calc(1.5 * 11rem); }
+  &.is-zoom-4x { flex: 0 0 calc(1.75 * 11rem); }
+  &.is-zoom-5x { flex: 0 0 calc(2 * 11rem); }
+  &.is-zoom-6x { flex: 0 0 calc(2.25 * 11rem); }
+  &.is-zoom-7x { flex: 0 0 calc(2.5 * 11rem); }
+
+  &.is-active { cursor: default; }
+
+  &-header {
+    flex: 0 0 6rem;
+    background: var(--green2);
+    border-radius: 0.3rem 0.3rem 0 0;
+    color: var(--white);
+    font-size: 1.2rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.is-active {
+      background: var(--white);
+      color: var(--green2);
+      font-weight: bold;
+    }
+  }
+
+  &-body {
+    flex: 1 0 auto; /* for shorthand flex-basis sometimes doesn't equal auto in IE */
+    height: 11rem;
+    margin: 0 0 0.1rem;
+    background-image: linear-gradient(transparent 0.1rem, var(--green3) 0);
+    background-size: 100% 1.1rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &.is-active {
+      background-image: linear-gradient(transparent 0.1rem, var(--green2) 0);
+    }
+
+    &-bar {
+      background: var(--green1);
+    }
+
+    &-line {
+      height: 1px;
+      background: var(--white);
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  &-footer {
+    flex: 0 0 3.2rem;
+    background: var(--green2);
+    border-radius: 0 0 0.3rem 0.3rem;
+    color: var(--green1);
+    font-size: 1.2rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.is-active {
+      background: var(--white);
+      color: var(--green2);
+      font-weight: bold;
+
+      & .bf-MoodTimelineItem-footer-notesCounter:not(.is-active) {
+        background-color: var(--green2);
+        color: var(--white);
+      }
+    }
+
+    &-left,
+    &-right {
+      flex: 1;
+    }
+
+    &-date {
+      text-align: center;
+    }
+
+    &-notes,
+    &-notesCounter {
+      display: inline-block;
+      text-align: center;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      margin: 0 0.6rem;
+      box-sizing: border-box;
+    }
+
+    &-notes {
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    &-notesCounter {
+      background: var(--white);
+      color: var(--green2);
+      border-radius: 50%;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &.is-active {
+        background: var(--red);
+        color: var(--white);
+      }
+    }
+  }
+
+  &:hover .bf-MoodTimelineItem-header:not(.is-active),
+  &:hover .bf-MoodTimelineItem-footer:not(.is-active) {
+    background: var(--green1-transparent35);
+  }
+
+  &:hover .bf-MoodTimelineItem-body:not(.is-active) {
+    background-image: linear-gradient(transparent 0.1rem, var(--green1-transparent35) 0);
+  }
+}

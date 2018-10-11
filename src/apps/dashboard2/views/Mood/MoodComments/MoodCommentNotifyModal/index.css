@@ -1,0 +1,39 @@
+@import "components/boot/variables.css";
+
+.bf-MoodCommentNotifyModal {
+  &-text {
+    color: var(--grey5);
+    font-size: 1.8rem;
+
+    & > a {
+      color: var(--green1);
+      cursor: pointer;
+    }
+  }
+
+  &-card {
+    margin: 3rem 0 4rem;
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: column;
+
+    & > &-form > textarea {
+      padding: 1.2rem;
+      border-radius: 0.3rem;
+      font-size: 1.8rem;
+      width: 100%;
+      height: 10.2rem;
+      box-sizing: border-box;
+      border: 1px solid var(--grey4);
+    }
+
+    & > &-buttons {
+      margin-top: 2rem;
+      text-align: right;
+
+      & > .bf-FormButton { position: relative; }
+    }
+  }
+}

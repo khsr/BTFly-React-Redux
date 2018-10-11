@@ -1,0 +1,66 @@
+@import "components/boot/variables.css";
+
+.bf-LeftMenuList {
+  margin: 3rem auto;
+  width: 18rem;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  flex: 1;
+
+  & > li > a {
+    color: var(--white);
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 0.9rem;
+    display: block;
+
+    & > i {
+      display: inline-block;
+
+      & > svg {
+        max-width: 1.6rem;
+        max-height: 1.6rem;
+        margin: 0 1rem -0.2rem 0;
+
+        & > path {
+          fill: var(--white);
+          opacity: 0.3;
+        }
+      }
+    }
+
+    & > span {
+      float: right;
+      min-width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      background: var(--red);
+      color: var(--white) !important;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      display: inline-block;
+      line-height: 2rem;
+      margin-top: -0.1rem;
+    }
+
+    &.is-active {
+      background-color: var(--green3);
+      border-radius: 0.3rem;
+      color: var(--green1);
+
+      & > i > svg > path {
+        fill: var(--green1);
+        opacity: 1;
+      }
+    }
+  }
+
+  &-hr {
+    border: none;
+    border-bottom: 1px solid var(--green3);
+    color: var(--green3);
+    margin: 0.9rem 0 0.6rem;
+  }
+}

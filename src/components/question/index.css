@@ -1,0 +1,55 @@
+@import "../boot";
+@import "../reply-header";
+
+.is-hide {
+  display: none !important;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.question {
+  background: var(--green2);
+}
+
+.question-body {
+  flex: 1 0 auto;
+  text-align: center;
+  padding: 1rem;
+
+  &__photo {
+    display: block;
+    height: 9rem;
+    width: 9rem;
+    margin: 1.7rem auto 0;
+    background-color: var(--white);
+    border: 0.3rem solid var(--white);
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin: 2rem 0 0;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--green1);
+    margin: 1.2rem 0 0;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: var(--white);
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "components/boot/variables.css";
+
+.bf-Icon {
+  &.is-white > svg > path {
+    fill: var(--white);
+    stroke: var(--white);
+  }
+
+  &.is-small > svg {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  &.is-medium > svg {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}

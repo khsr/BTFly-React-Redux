@@ -1,0 +1,12 @@
+@import "components/boot/variables.css";
+
+.bf-GetFeedbackClearForm {
+  display: block;
+  margin: 3rem auto 0.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: var(--green1);
+}

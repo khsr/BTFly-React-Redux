@@ -1,0 +1,29 @@
+.question-form-thumb {
+  display: inline-block;
+  cursor: pointer;
+  height: 7.1rem;
+  width: 6.5rem;
+
+  &--up {
+    margin-right: 1rem;
+  }
+
+  &--down {
+    margin-bottom: -2.5rem;
+    margin-left: 3rem;
+  }
+
+  & > svg path {
+    fill: #DEDEDE;
+    transition: fill 0.1s;
+  }
+
+  &.is-empty > svg path {
+    fill: #C3C3C3;
+  }
+
+  &:hover > svg path,
+  &.is-selected > svg path {
+    fill: var(--green2);
+  }
+}

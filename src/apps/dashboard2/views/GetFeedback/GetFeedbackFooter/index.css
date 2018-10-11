@@ -1,0 +1,60 @@
+@import "components/boot/variables.css";
+
+.bf-GetFeedbackFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (--before-small) {
+    flex-direction: column;
+  }
+
+  &-anonymous {
+    box-sizing: border-box;
+    flex: 1;
+    height: 6rem;
+    margin-right: 1rem;
+    border-radius: 0.3rem;
+    background: var(--grey1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+
+    & > span {
+      color: var(--green2);
+      font-size: 1.6rem;
+      margin-left: auto;
+    }
+
+    & > .bf-InfoCallout {
+      margin-right: -1rem;
+      margin-left: 0.7rem;
+    }
+
+    @media (--before-small) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & > .bf-FormButton {
+    @media (--before-small) {
+      width: 100%;
+    }
+  }
+
+  &-prevButton {
+    padding: 0;
+    text-decoration: underline;
+    color: var(--green1);
+    font-size: 1.6rem;
+    border: none;
+    background: transparent;
+
+    @media (--before-small) {
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

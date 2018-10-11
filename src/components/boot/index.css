@@ -1,0 +1,82 @@
+@import "./variables.css";
+
+/**
+ * Typography.
+ */
+
+html {
+  font-size: 62.5%; /* 1rem ~ 10px */
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+
+  @media (--before-small) {
+    font-size: 56.25%; /* 1rem ~ 9px */
+  }
+}
+
+/**
+ * Layout.
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--grey1);
+
+  /* Force hardware-acceleration in Webkits to prevent text flickering: http://davidwalsh.name/translate3d */
+  transition: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* disable default input shadow */
+input:not([type="radio"]),
+textarea {
+  appearance: none;
+}
+
+/* disable resize icon in chrome, since we do autoresize */
+textarea {
+  resize: none;
+}
+
+/* no outline around buttons */
+button,
+select,
+input,
+textarea {
+  outline: none;
+}
+
+/**
+ * Utils.
+ */
+
+.u-hide {
+  display: none !important;
+}
+
+.u-hidden {
+  visibility: hidden !important;
+}
+
+/**
+ * Body classes.
+ */
+
+.u-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-green1 {
+  background-color: var(--green1);
+}
+
+.u-green2 {
+  background-color: var(--green2);
+}

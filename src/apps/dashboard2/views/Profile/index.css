@@ -1,0 +1,21 @@
+@import "components/boot/variables.css";
+
+.bf-ProfileColumns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (--before-large) {
+    flex-direction: column;
+  }
+
+  &-column {
+    width: 100%;
+    max-width: 40.5rem;
+
+    &:first-of-type {
+      margin-right: 2.4rem;
+    }
+  }
+}

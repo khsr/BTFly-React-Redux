@@ -1,0 +1,130 @@
+@import "components/boot/variables.css";
+
+.bf-MoodNotesTagsModal {
+  background-color: var(--green4);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 43rem;
+  max-height: 100%;
+  width: 35rem;
+
+  @media (--before-small) {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-header {
+    display: flex;
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 0.7rem;
+
+    & > .bf-CloseButton {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  &-tags {
+    flex: 1;
+    width: 100%;
+    margin: 0.7rem 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.6rem;
+  }
+
+  &-title {
+    color: var(--white);
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    color: var(--white);
+    max-width: 80%;
+    text-align: center;
+    margin: 0.7rem 0;
+  }
+
+  &-tag {
+    margin-top: 0.1rem;
+    background-color: var(--green3);
+    border-radius: 3px;
+    padding: 0.8rem 0.6rem;
+    height: 3.2rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    & > .bf-FormCheck {
+      font-size: 1.6rem;
+      flex: 0 0 2rem;
+    }
+
+    &-name {
+      font-size: 1.2rem;
+      color: var(--green1);
+      font-weight: bold;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &-remark {
+      flex: 1;
+      font-size: 1rem;
+      color: var(--white);
+      margin-left: 0.3rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &.is-active {
+      background-color: var(--green2);
+    }
+
+    &.is-allCompany {
+      background-color: var(--green1-transparent80);
+
+      & .bf-MoodNotesTagsModal-tag-name {
+        color: var(--green2);
+      }
+    }
+
+    &.is-active.is-allCompany {
+      background-color: var(--green1);
+    }
+  }
+
+  &-makePrivate {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: var(--green1);
+    cursor: pointer;
+  }
+
+  &-confirm {
+    background-color: var(--green1);
+    color: var(--white);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}

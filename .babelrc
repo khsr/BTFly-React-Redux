@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "lodash",
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": false
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-inline-elements",
+        "transform-react-constant-elements"
+      ]
+    }
+  }
+}
